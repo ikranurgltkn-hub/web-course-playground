@@ -1,0 +1,83 @@
+:root {
+    --dark: #14213d;
+    --accent: #d9692b;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: system-ui, sans-serif;
+  }
+  
+  /* Header & Flexbox */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 24px;
+    background: var(--dark);
+  }
+  
+  header a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  nav {
+    display: flex;
+    gap: 24px;
+  }
+  
+  /* Main & Card Grid */
+  main {
+    padding: 24px;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin-bottom: 24px;
+  }
+  
+  article {
+    padding: 24px;
+    border-radius: 12px;
+    background: #f5f3ee;
+  }
+  
+  /* Form Styles */
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: 400px;
+    margin-top: 24px;
+  }
+  
+  input {
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  button {
+    background: var(--accent);
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  /* Responsive Grid: Masaüstünde 3 sütun */
+  @media (min-width: 768px) {
+    .cards {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
